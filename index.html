@@ -242,47 +242,93 @@
       </section>
       <!-- services section end -->
       <!-- about sectuion start -->
-      <section class="about_section layout_padding" id="about">
-        <div class="container">
+      <section class="about_section layout_padding p-5 mt-5" id="about">
+        <div class="container" style="max-width: 100% !important">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 pr-5">
               <h2 class="about_taital">Sobre Nosotros</h2>
-              <p class="about_text">
+              <p class="about_text mb-3">
                 Nuestra empresa, fundada por Eduardo Ernesto Lining en 2003 en
                 San Vicente, Misiones, se especializa en la distribución de
-                vidrios, aluminios y accesorios de aluminio. A lo largo de los
-                años, nos hemos consolidado como líderes en el sector gracias a
-                nuestro compromiso con la calidad y la innovación. Una de
-                nuestras principales ventajas competitivas es contar con una
-                fábrica propia de pintura para aluminios. Esto nos permite
+                vidrios, aluminios y accesorios de aluminio.<br />
+                A lo largo de los años, nos hemos consolidado como líderes en el
+                sector gracias a nuestro compromiso con la calidad y la
+                innovación.<br />
+                Una de nuestras principales ventajas competitivas es contar con
+                una fábrica propia de pintura para aluminios. Esto nos permite
                 ofrecer productos altamente personalizados y con los más altos
                 estándares de calidad, adaptándonos a las necesidades
-                específicas de cada cliente. En 2023, participamos en China
-                Glass en Shanghái, una destacada feria internacional de la
-                industria del vidrio, lo que nos permitió estar a la vanguardia
-                de las últimas tendencias y tecnologías del sector. Nos
-                enorgullece nuestro proceso de trabajo, que es totalmente
+                específicas de cada cliente.<br />
+                Nos enorgullece nuestro proceso de trabajo, que es totalmente
                 transparente y accesible. Creemos firmemente en la importancia
                 de mantener una comunicación abierta con nuestros clientes,
                 asegurando que cada proyecto se desarrolle de manera eficiente y
-                cumpla con sus expectativas. En nuestra empresa, la satisfacción
-                del cliente es nuestra prioridad. Nos esforzamos por brindar un
-                servicio excepcional, desde la asesoría inicial hasta la entrega
-                final del producto, garantizando siempre la mejor experiencia
-                posible.
+                cumpla con sus expectativas.<br />
+                En nuestra empresa, la satisfacción del cliente es nuestra
+                prioridad. Nos esforzamos por brindar un servicio excepcional,
+                desde la asesoría inicial hasta la entrega final del producto,
+                garantizando siempre la mejor experiencia posible.
               </p>
               <!-- <div class="read_bt_1"><a href="#">Read More</a></div> -->
             </div>
-            <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
-              <figure style="height: 45vh">
+            <div class="col-md-6">
+              <figure style="height: 65vh">
                 <img src="images/us.webp" alt="" id="usCarrousel" />
               </figure>
             </div>
           </div>
         </div>
       </section>
-
       <!-- about sectuion end -->
+      <!-- about china start -->
+      <section class="about_section layout_padding p-5 mt-5" id="about">
+        <div class="container" style="max-width: 100% !important">
+          <div class="row">
+            <div class="col-md-6 pl-5">
+              <h2 class="about_taital">Nuestra Visita a <b>China Glass</b></h2>
+              <p class="about_text mb-3">
+                En 2023, tuvimos el honor de participar en China Glass en
+                Shanghái, una feria internacional de renombre que reúne a los
+                líderes y expertos más destacados de la industria del vidrio a
+                nivel global.<br />
+                Este evento fue una oportunidad invaluable para presentar
+                nuestros productos, tecnologías y capacidades ante una audiencia
+                internacional diversa y especializada.<br />
+                Durante nuestra participación, no solo exhibimos nuestros
+                productos de vanguardia y soluciones innovadoras, sino que
+                también aprovechamos para explorar nuevas colaboraciones y
+                alianzas estratégicas con empresas líderes y proveedores clave
+                en el ámbito del vidrio y el aluminio.<br />
+                Nuestra presencia en China Glass nos permitió estar a la
+                vanguardia de las últimas tendencias y desarrollos tecnológicos
+                del sector.<br />
+                Participar en conferencias, seminarios y paneles de discusión
+                nos brindó una perspectiva única sobre los desafíos y
+                oportunidades emergentes en la industria, fortaleciendo así
+                nuestro compromiso con la innovación continua y la excelencia en
+                el servicio.<br />
+                Además, la experiencia en China Glass fue un testimonio de
+                nuestro compromiso constante con la calidad y la satisfacción
+                del cliente.<br />
+                Nos enorgullece haber podido demostrar nuestra capacidad para
+                adaptarnos y responder de manera proactiva a las necesidades
+                cambiantes del mercado global del vidrio y el aluminio.<br />
+                En resumen, nuestra participación en China Glass no solo fue un
+                éxito comercial, sino también una confirmación de nuestra
+                posición como líderes en el sector y nuestro compromiso continuo
+                con la excelencia, la innovación y el servicio al cliente.
+              </p>
+              <!-- <div class="read_bt_1"><a href="#">Read More</a></div> -->
+            </div>
+            <div class="col-md-6">
+              <figure style="height: 65vh">
+                <img src="images/us3.webp" alt="" id="china" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about china end -->
       <!-- contact section start -->
       <section class="contact_section layout_padding" id="contact">
         <div class="container-fluid">
@@ -452,9 +498,10 @@
         json: {
           "images/us.webp": "Imagen 1",
           "images/us1.webp": "Imagen 2",
-          "images/us2.webp": "Imagen 3",
-          "images/us3.webp": "Imagen 4",
           "images/us4.webp": "Imagen 5",
+          "images/us7.jpg": "Imagen 4",
+          "images/us8.jpg": "Imagen 4",
+          "images/us10.jpg": "Imagen 4",
         },
         t: "7000",
       });
@@ -466,6 +513,17 @@
           "images/bg0.webp": "Imagen 2",
         },
         t: "10000",
+      });
+
+      Carrousel({
+        d: "#china",
+        json: {
+          "images/us2.webp": "Imagen 3",
+          "images/us3.webp": "Imagen 4",
+          "images/us5.jpg": "Imagen 4",
+          "images/us6.jpg": "Imagen 4",
+        },
+        t: "8000",
       });
 
       Carrousel({
