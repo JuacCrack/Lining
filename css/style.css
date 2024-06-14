@@ -35,6 +35,7 @@
 
 .figure {
     height: 30vh;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -693,7 +694,7 @@ button {
 .box_main {
     width: 100%;
     background-color: #ffffff;
-    height: 40vh;
+    height: max-content;
     padding: 40px 20px 40px 20px;
     border-radius: 20px;
     border: 1px solid #d1d1d1;
