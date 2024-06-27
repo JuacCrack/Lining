@@ -188,7 +188,7 @@
                   </figure>
                   <h3 class="development_text">Diseño a Medida</h3>
                   <p class="services_text">
-                    Creamos aberturas únicas y personalizadas que se ajustan
+                    Creamos diseños únicos y personalizadas que se ajustan
                     perfectamente a sus gustos y requerimientos específicos.
                   </p>
                   <!-- <div class="readmore_bt"><a href="#">Read More</a></div> -->
@@ -210,7 +210,7 @@
                   <p class="services_text">
                     Ofrecemos un servicio de transporte seguro y eficiente para
                     garantizar que sus productos lleguen en perfectas
-                    condiciones.
+                    condiciones a toda la provincia de Misiones.
                   </p>
                   <!-- <div class="readmore_bt"><a href="#">Read More</a></div> -->
                 </article>
@@ -284,7 +284,7 @@
       <section class="about_section layout_padding p-5 mt-5" id="about">
         <div class="container" style="max-width: 100% !important">
           <div class="row">
-            <div class="col-md-6 ">
+            <div class="col-md-6">
               <h2 class="about_taital">Nuestra Visita a <b>China Glass</b></h2>
               <p class="about_text mb-3">
                 En 2023, tuvimos el honor de participar en China Glass en
@@ -329,6 +329,61 @@
         </div>
       </section>
       <!-- about china end -->
+      <!-- about turquia start -->
+      <section class="about_section layout_padding p-5 mt-5" id="about">
+        <div class="container" style="max-width: 100% !important">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="about_taital">Nuestra Visita a <b>Turquía</b></h2>
+              <p class="about_text mb-3">
+                Este viaje fue una experiencia enriquecedora para nosotros, ya
+                que aprendimos mucho y regresamos a Misiones con nuevas ideas y
+                conocimientos para seguir innovando.<br />
+                Viajamos con el objetivo de conocer las nuevas tendencias del
+                aluminio y vidrios, así como las últimas tecnologías aplicadas
+                en el sector.<br />
+                Agradecemos a las fábricas y personas expertas que nos
+                recibieron, compartiendo con nosotros su valiosa experiencia y
+                conocimiento.<br />
+                Durante nuestra estancia, visitamos diversas instalaciones de
+                producción y nos reunimos con líderes de la industria, lo que
+                nos permitió adquirir una perspectiva más amplia y profunda de
+                las innovaciones y mejores prácticas actuales.<br />
+                Las lecciones aprendidas en Turquía nos han inspirado a aplicar
+                nuevas técnicas y procesos en nuestro trabajo diario.<br />
+                Estamos particularmente entusiasmados por las tecnologías
+                avanzadas que descubrimos, las cuales prometen mejorar la
+                eficiencia y la calidad de nuestros productos.<br />
+                Además, las nuevas tendencias observadas nos motivan a ofrecer a
+                nuestros clientes soluciones más innovadoras y
+                personalizadas.<br />
+                Este viaje no solo enriqueció nuestro conocimiento técnico, sino
+                que también fortaleció nuestras relaciones comerciales.<br />
+                Establecimos contactos valiosos que nos permitirán futuras
+                colaboraciones y asociaciones estratégicas.<br />
+                Estamos agradecidos por la hospitalidad y generosidad de
+                nuestros anfitriones en Turquía, quienes compartieron sus
+                mejores prácticas y nos proporcionaron una visión única de la
+                industria global del vidrio y aluminio.<br />
+                Estamos entusiasmados de aplicar lo aprendido en nuestro trabajo
+                y de compartir estas innovaciones con nuestros clientes.<br />
+                Gracias por acompañarnos en esta emocionante aventura y por
+                confiar en nosotros para seguir brindando productos y servicios
+                de alta calidad.
+              </p>
+
+              <!-- <div class="read_bt_1"><a href="#">Read More</a></div> -->
+            </div>
+            <div class="col-md-6">
+              <video style="width: 100%; height: 65vh;" controls>
+                <source src="images/1.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+              </video>              
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about turquia end -->
       <!-- contact section start -->
       <section class="contact_section layout_padding" id="contact">
         <div class="container-fluid">
@@ -447,6 +502,15 @@
     <script src="js/plugin.js"></script>
 
     <script>
+      function updateBackground() {
+        if (window.innerWidth >= 300 && window.innerWidth <= 600) {
+          document.getElementById("mainBg").src = "images/nbg.webp";
+        }
+      }
+
+      window.addEventListener("resize", updateBackground);
+      updateBackground();
+
       function sendMSJ(e) {
         e.preventDefault();
         const name = document.querySelector('input[name="name"]').value;
@@ -506,14 +570,20 @@
         t: "7000",
       });
 
-      Carrousel({
-        d: "#mainBg",
-        json: {
-          "images/bg.webp": "Imagen 1",
-          "images/bg0.webp": "Imagen 2",
-        },
-        t: "10000",
-      });
+      if (
+        window.matchMedia("(min-width: 300px) and (max-width: 600px)").matches
+      ) {
+        // No ejecutar el Carrousel
+      } else {
+        Carrousel({
+          d: "#mainBg",
+          json: {
+            "images/bg.webp": "Imagen 1",
+            "images/bg0.webp": "Imagen 2",
+          },
+          t: "10000",
+        });
+      }
 
       Carrousel({
         d: "#china",
